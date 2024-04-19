@@ -1,0 +1,37 @@
+@font-face {
+    font-family:'Exo 2';
+    src: url('../fonts/Exo\ 2\ Regular.woff2') format('woff2'),
+		url('../fonts/Exo\ 2\ Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2039;
+}
+
+
+
+body {
+    background-image: url('../img/pengbg.svg');
+    background-size: cover;
+    font-family: 'Exo 2';
+}
+
+
+.center {
+    max-width: 60rem;
+    margin: 0 auto;
+
+}
+
+.container_box {
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.container__box__text {
+    margin: 0 auto;
+    max-width: 20rem;
+}
+
+
+
