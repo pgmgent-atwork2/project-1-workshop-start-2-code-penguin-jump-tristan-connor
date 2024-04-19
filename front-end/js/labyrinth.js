@@ -3,6 +3,7 @@ let width = 400;
 let mazeFunctions = [];
 let player;
 
+
 function setup() {
     const myCanvas = createCanvas(width, height);
 
@@ -136,6 +137,14 @@ function Player() {
     };
 }
 
+function changeDisplay() {
+   const compbox = document.querySelector('.completed-box')
+
+   compbox.classList.replace('completed-box--hidden', 'completed-box--visible')
+}
+
+
+
 function draw() {
     background(255);
 
@@ -148,7 +157,8 @@ function draw() {
 
     const pixelColor = get(coord.x, coord.y);
     if (pixelColor[0] === 0 && pixelColor[1] === 255 && pixelColor[2] === 150) {
-        console.log("win");
+        changeDisplay()
+        
     } else if (pixelColor[0] !== 255 || pixelColor[1] !== 255 || pixelColor[2] !== 255) {
         console.log("reset position");
         player.targetX = 10;
