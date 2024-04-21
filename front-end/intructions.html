@@ -44,7 +44,7 @@
 
         <p>
             In de index.html schrijf je een h1 voor de hoofdtitel, een h2 voor eventuele ondertitel en een p voor de tekst.
-            Dit schrijg je in de main sectie van je HTML bestand.
+            Dit schrijf je in de main sectie van je HTML bestand.
             En doe je deze manier: < h1 >titel< /h1 >.
             < h2 >ondertitel< /h2 >.
         </p>
@@ -69,7 +69,7 @@
 
     <div>
         <h2>
-            Stap 3: Variabelen
+            Stap 4: Variabelen
         </h2>
         <p>
             Soms willen we een waarde opslaan om later te gebruiken. Dit doen we door een variabele te maken. Een variabele is een container waarin we een waarde kunnen opslaan. Dit doen we door "let" te schrijven gevolgd door de naam van de variabele en een waarde. Dit ziet er zo uit: "let x = 200;". Dit zorgt ervoor dat we een variabele x hebben met de waarde 200. <br>
@@ -80,7 +80,7 @@
 
     <div>
         <h2>
-            Stap 4: Het labyrin tekenen
+            Stap 5: Het labyrin tekenen
         </h2>
         <p>
             Eerst maken we een funtie aan voor elke maze dat we willen gebruiken. We starten met de eerste maze. Dit doen we door "function drawMaze1() {}" te schrijven. In deze functie willen we een labyrint tekenen.
@@ -101,7 +101,7 @@
 
     <div>
         <h2>
-            Stap 5: Start voor de penguin
+            Stap 6: Start voor de penguin
         </h2>
         <p>
             Nu onze labyrinths getekend zijn, willen we een penguin tekenen. Dit doen we door een functie aan te maken die we "drawPenguin" noemen.
@@ -118,7 +118,7 @@
 
     <div>
         <h2>
-            Stap 6: Tekenen van de penguin
+            Stap 7: Tekenen van de penguin
         </h2>
         <p>
             De penguin staat momenteel nog niet op de pagina. Dit doen we door een nieuwe functie in de player class aan te maken die we "show" noemen. Deze gaan de penguin tekenen en laten zien. Geef een kleur aan de penguin door de tag "fill(255);" te schrijven. Dit zorgt ervoor dat de penguin wit is. We doen dit voor het tekenen van de vorm omdat het eerst een kleur verwacht. Indien er geen kleur wordt gespecifieerd word de laatste kleur die ingesteld werd gebruikt.
@@ -134,7 +134,7 @@
 
     <div>
         <h2>
-            Stap 7: Bewegen van de penguin
+            Stap 8: Bewegen van de penguin
         </h2>
         <p>
             Het bewegen doen we via de pijltjes toetsen. Hierbij wordt weer een nieuwe funtie aangemaakt genaamd handleKeyPress. Deze functie doet niets zolang er geen pijltjes worden ingezet. De functie monitort of er een pijltjestoets wordt ingedrukt via een if statement. Dit ziet er zo uit: "if (statement)". Om nu de keys te monitoren veranderen we de statement naar "keyIsDown(UP_ARROW)". En binnen onze if statement schrijven we this.targetY (Dit is de derde variabele die we hebben aangemaakt) en stellen we deze gelijk aan de this.y waarde min de grootte van de stap dat we willen dat de penguin zet. Voor nu zetten we deze gelijk aan 10. Uiteindelijk ziet de if statement er zo uit: if(keyIsDown(UP_ARROW)) { this.targetY = this.y - 10; }. We herhalen deze stap voor de andere pijltjestoetsen. De pijl naar beneden gebruikt this.y + 10, de pijl naar links gebruikt this.x - 10 en de pijl naar rechts gebruikt this.x + 10.
@@ -153,7 +153,7 @@
 
     <div>
         <h2>
-            Stap 8: zijkanten van het canvas
+            Stap 9: zijkanten van het canvas
         </h2>
         <p>
             Als je nu probeert te bewegen zal je zien dat de penguin van het canvas af kan. Dit is niet de bedoeling. Om dit te voorkomen moeten we een if statement toevoegen die checkt of de penguin binnen het canvas is. Dit doen we door een if statement te schrijven die checkt of de this.x en this.y waardes binnen het canvas zijn. Dit ziet er zo uit: <br>
@@ -175,7 +175,7 @@
     </div>
     <div>
         <h2>
-            Stap 9: De maze aanraken
+            Stap 10: De maze aanraken
         </h2>
         <p>
             Momenteel kan je u begeven naar de uitgang van het labyrint zonder dat er iets gebeurt. Om dit te voorkomen moeten we een if statement toevoegen die checkt of de penguin de maze aanraakt. Schrijf hiervoor een if statement die checkt of the postitie waar het center van de penguin zich bevindt gelijk is aan de kleur zwart. Is dit zo dan moet de penguin terug naar het begin van het labyrint. Dit ziet er zo uit: <br>
@@ -205,7 +205,7 @@
 
     <div>
         <h2>
-            Stap 10: Het spel voltooien
+            Stap 11: Het spel voltooien
         </h2>
         <p>
             Als je nu de uitgang van het labyrint aanraakt zal er niets gebeuren. Om het spel te voltooien moeten we een functie aanmaken die de speler feliciteert. Dit doen we door een functie aan te maken die we "changeDisplay" noemen. In deze functie veranderen we de display van de pagina zodat er een bericht verschijnt dat de speler het labyrint heeft voltooid. Dit ziet er zo uit: <br>
