@@ -13,53 +13,56 @@
     <a href="intructions.html">Intructions</a>
 </nav>
 
-<main>
+<main class="center container">
     <h1>Welcome to Penguin, Jump!</h1>
     <p>Hier kan je aan de hand van de instructies zelf dit uitstekende spel maken met p5 Javascript, HTML en CSS</p>
 
     <div>
-        <h2>
+        <h2 class="container__header" >
             Stap 1: Basis bestanden opstellen
         </h2>
         <p>
-            Maak een nieuwe map aan en noem deze PenguinJump. Maak vervolgens een index.html, main.css en labyrinth.js bestand aan.
+            Maak een nieuwe map aan en noem deze PenguinJump. Maak vervolgens een index.html bestand aan. Ook maak je in de PenguinJump map een andere map assets aan, in deze assets folder maak je dan nog eens een folder css, en js toe, zo kun je goed overzicht houden van je documenten. in css folder maak je een main.css bedand aan en in de js map maak je een labyrinth.js bestand aan. Dit zou er als volgt moeten uitzien:
         </p>
+        <img src="./assets/img/mapStructure.png" alt="">
+        <p>De font, en de foto's krijg je van ons.</p>
         <p>
             Open je index.html bestand en druk de volgende tekens in: ! + tab. Dit zal een basis HTML structuur voor je aanmaken.
-            In de head sectie van je HTML bestand voeg je de volgende regels toe: < link rel="stylesheet" href="reset.css" >
-            en < link rel="stylesheet" href="main.css" >. Dit zorgt ervoor dat je CSS bestanden worden geladen.    
+            In de head sectie van je HTML bestand voeg je de volgende regels toe:
+            
+            <img src="assets/img/linkOfCssAndP5LabyScript.png" alt="">
+             Dit zorgt ervoor dat je CSS bestanden worden geladen.    
         </p>
         <p>
-            Voeg ook < script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js">< /script> toe aan je HTML bestand. Dit zorgt ervoor dat je p5.js library wordt geladen. 
+            Voeg ook het script  toe aan je HTML bestand. Dit zorgt ervoor dat je p5.js library wordt geladen. 
         </p>
         <p> 
-            Voor het Javascript bestand zelf toe te voegen, begeef je u naar het einde van de body sectie van je HTML bestand en voeg je < script src="labyrinth.js">< /script> toe.
+            Voor het Javascript bestand zelf toe te voegen, begeef je u naar het einde van de body sectie van je HTML bestand en voeg je <img src="assets/img/addScript.png" alt="">
         </p>
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 2: HTML bestand opstellen
         </h2>
 
         <p>
-            In de index.html schrijf je een h1 voor de hoofdtitel, een h2 voor eventuele ondertitel en een p voor de tekst.
-            Dit schrijf je in de main sectie van je HTML bestand.
-            En doe je deze manier: < h1 >titel< /h1 >.
+            In de index.html maak je een < main >< /main > hier in schrijf je zelf de tekst die nodig is aan de hand van h1, h2, en p waarbij een h1 voor de hoofdtitel staat, een h2 voor eventuele ondertitel en een p voor de tekst.
+            dit doe je op deze manier: < h1 >titel< /h1 >.
             < h2 >ondertitel< /h2 >.
         </p>
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 3: Het canvas opstellen
         </h2>
 
         <p>
-            Om het spel te maken starten we met een canvas op te stellen. Dit doen we in onze setup functie in ons Javascript bestand.
+            Om het spel te maken starten we met een canvas op te stellen. Dit doen we in onze setup functie in ons Javascript bestand labyrinth.js.
         </p>
         <p>
-            De setup functie is een functie die een keer wordt uitgevoerd wanneer het programma start. En die gebruiken we door het volgende te schrijven: "funtion setup() {}". Hier willen we onze canvas opstellen. Dit doen we door "createCanvas(400, 400);" te schrijven. Dit zorgt ervoor dat we een canvas van 400 bij 400 pixels krijgen.
+            De setup functie is een functie die één keer wordt uitgevoerd wanneer het programma start. En die gebruiken we door het volgende te schrijven: "funtion setup() {}". Hier willen we onze canvas opstellen. Dit doen we door "createCanvas(400, 400);" te schrijven. Dit zorgt ervoor dat we een canvas van 400 bij 400 pixels krijgen.
         </p>
         <p>
             Om een achtergrondkleur toe te voegen aan ons canvas, schrijven we "background(220);" in onze setup functie. Dit zorgt ervoor dat we een grijze achtergrond krijgen.<br>
@@ -68,7 +71,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 4: Variabelen
         </h2>
         <p>
@@ -79,7 +82,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 5: Het labyrin tekenen
         </h2>
         <p>
@@ -91,6 +94,7 @@
         <p>
             Voor dit spel hebben we de labyrinths gemaakt door altijd een lijn te tekenen die eventueel verder gaat op het laatste punt van de vorige lijn. Op deze manier kan je zoveel lijnen op je canvas zetten als je wenst.
         </p>
+        <p>Dit zou er dan zo moeten uitzien: <img src="assets/img/laby.png" alt=""></p>
         <p>
             Herhaal deze stap voor elke maze die je wilt gebruiken.
         </p>
@@ -100,7 +104,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 6: Start voor de penguin
         </h2>
         <p>
@@ -117,7 +121,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 7: Tekenen van de penguin
         </h2>
         <p>
@@ -133,7 +137,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 8: Bewegen van de penguin
         </h2>
         <p>
@@ -152,7 +156,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 9: zijkanten van het canvas
         </h2>
         <p>
@@ -174,7 +178,7 @@
         </p>
     </div>
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 10: De maze aanraken
         </h2>
         <p>
@@ -204,7 +208,7 @@
     </div>
 
     <div>
-        <h2>
+        <h2 class="container__header">
             Stap 11: Het spel voltooien
         </h2>
         <p>
