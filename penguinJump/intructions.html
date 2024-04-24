@@ -160,17 +160,8 @@
             Stap 9: zijkanten van het canvas
         </h2>
         <p>
-            Als je nu probeert te bewegen zal je zien dat de penguin van het canvas af kan. Dit is niet de bedoeling. Om dit te voorkomen moeten we een if statement toevoegen die checkt of de penguin binnen het canvas is. Dit doen we door een if statement te schrijven die checkt of de this.x en this.y waardes binnen het canvas zijn. Dit ziet er zo uit: <br>
-            this.bounce = function () {<br>
-                if (this.x > width || this.x < 0) {<br>
-                    this.x = 10; // Reset target x position to prevent moving outside the canvas<br>
-                    this.y = 10; // Reverse horizontal velocity to bounce off the walls<br>
-                }<br>
-                if (this.y > height || this.y < 0) {<br>
-                    this.x = 10; // Reset target x position to prevent moving outside the canvas<br>
-                    this.y = 10; // Reverse vertical velocity to bounce off the walls<br>
-                }<br>
-            };
+            Als je nu probeert te bewegen zal je zien dat de penguin van het canvas af kan. Dit is niet de bedoeling. Om er voor te zorgen dat dit niet gebeurt moeten we een if statement toevoegen die checkt of de penguin binnen het canvas is, hierbij controleren we of de this.x en this.y waardes binnen het canvas zijn. we schrijven dit in de player function, Dit ziet er zo uit: <br>
+            <img src="./assets/img/bouncecheck.png" alt="">
         </p>
         <p>
             Zorg er ook voor dat de bounce functie wordt aangeroepen in de draw functie. Dit ziet er zo uit: <br>
@@ -182,28 +173,13 @@
             Stap 10: De maze aanraken
         </h2>
         <p>
-            Momenteel kan je u begeven naar de uitgang van het labyrint zonder dat er iets gebeurt. Om dit te voorkomen moeten we een if statement toevoegen die checkt of de penguin de maze aanraakt. Schrijf hiervoor een if statement die checkt of the postitie waar het center van de penguin zich bevindt gelijk is aan de kleur zwart. Is dit zo dan moet de penguin terug naar het begin van het labyrint. Dit ziet er zo uit: <br>
-            currentMazeFunction();<br>
+            Momenteel kan je je begeven naar de uitgang van het labyrint zonder dat er iets gebeurt als je de muren aanraakt. Om dit te voorkomen moeten we een if statement toevoegen die checkt of de penguin het doolhof aanraakt, hierbij controleren we  of the postitie waar het midden van de penguin zich bevindt gelijk is aan de kleur zwart. Is dit zo dan moet de penguin terug naar het begin van het labyrint. Dit doen je als volgt: <br>
+            
 
-            const coord = {<br>
-                x: Math.round(player.x),<br>
-                y: Math.round(player.y)<br>
-            };<br>
-<br>
-            const pixelColor = get(coord.x, coord.y);<br>
-            if (pixelColor[0] === 0 && pixelColor[1] === 255 && pixelColor[2] === 150) {<br>
-                changeDisplay()<br>
-                <br>
-            } else if (pixelColor[0] !== 255 || pixelColor[1] !== 255 || pixelColor[2] !== 255) {<br>
-                console.log("reset position");<br>
-                player.targetX = 10;<br>
-                player.targetY = 10;<br>
-            } else {<br>
-                player.handleKeyPress();<br>
-            }<br>
+            <img src="./assets/img/wallcheck.png" alt="">
         </p>
         <p>
-            Dit wordt in de draw functie geplaatst omdat we willen dat dit continu wordt gecheckt.
+            Deze wordt in de draw functie zelf geplaatst omdat we willen dat dit continu wordt gecheckt.
         </p>
     </div>
 
