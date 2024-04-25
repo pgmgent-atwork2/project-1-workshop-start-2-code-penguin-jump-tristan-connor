@@ -143,8 +143,6 @@ function changeDisplay() {
    compbox.classList.replace('completed-box--hidden', 'completed-box--visible')
 }
 
-
-
 function draw() {
     background(255);
 
@@ -161,6 +159,8 @@ function draw() {
         
     } else if (pixelColor[0] !== 255 || pixelColor[1] !== 255 || pixelColor[2] !== 255) {
         console.log("reset position");
+        player.x = 10;
+        player.y = 10;
         player.targetX = 10;
         player.targetY = 10;
     } else {
